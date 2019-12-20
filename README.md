@@ -13,6 +13,8 @@ to get the latest code,you may find the commit ID on master branch and copy it t
 
 ```
 go get -u github.com/qzyse2017/openvas-golang-lib@[latest-commit-id-here]
+
+go mod tidy
 ```
 
 

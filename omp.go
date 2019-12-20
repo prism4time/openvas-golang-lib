@@ -28,6 +28,8 @@ type OMP interface {
 	// scanners
 	CreateScanner(s *Scanner, credID string) (string, error)
 	GetScanners() ([]Scanner, error)
+	GetScannerByName(scannerName string) (string, error)
+	GetDefaultScanner() (string, error)
 
 	// credentials
 	CreateCredential(cred Credential) (string, error)
