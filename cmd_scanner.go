@@ -3,6 +3,7 @@ package omp
 import (
 	"encoding/xml"
 	"errors"
+	"fmt"
 
 	"github.com/jinzhu/copier"
 )
@@ -117,5 +118,8 @@ func (c *Connector) GetScannerByName(scannerName string) (string, error) {
 			return scannerLst[i].ID, nil
 		}
 	}
-	return "", errors.New("no such scanner with this name", scannerName)
+	return "", errors.New(
+		fmt.Sprintf("no such scanner with this name",
+			scannerName),
+	)
 }
