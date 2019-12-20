@@ -4,7 +4,9 @@ import (
 	"encoding/xml"
 )
 
-// Task .
+// Task represent task entity in openvas,
+// to use it as an argument in call to create task
+// you should init its comment,name,and ID for config target, scanner
 type Task struct {
 	Hosts            []string
 	Text             string    `xml:",chardata"`
