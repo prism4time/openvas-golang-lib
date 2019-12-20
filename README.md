@@ -13,7 +13,7 @@ go get -u github.com/qzyse2017/openvas-golang-lib
 currently it only supports task and target related API. And I will update it occasionally according to my needs.
 
 ## examples
-[a simple example](https://github.com/qzyse2017/openvas-golang-lib)
+[a simple example](https://github.com/qzyse2017/openvas-golang-lib-example)
 
 ## Contributions
 PRs welcome!!!!!!❤️❤️❤️❤️❤️❤️
