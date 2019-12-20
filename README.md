@@ -5,6 +5,9 @@ A golang library to connect and manage the OpenVAS servers using the OMP protoco
 ## supported API
 currently it only supports task and target related API. And I will update it occasionally according to my needs.
 
+## examples
+[a simple example](https://github.com/qzyse2017/openvas-golang-lib)
+
 ## Contributions
 PRs welcome!!!!!!❤️❤️❤️❤️❤️❤️
 ## License
