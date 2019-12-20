@@ -27,5 +27,13 @@ currently it only supports task and target related API. And I will update it occ
 
 ## Contributions
 PRs welcome!!!!!!❤️❤️❤️❤️❤️❤️
+
+## How to contribute
+basically I generate most of the commands related structs from xml example in [openvas's omp docs](https://docs.greenbone.net/API/OMP/omp.html). The tool is [zek](https://github.com/miku/zek), and it has a handy [online version](https://www.onlinetool.io/xmltogo/) you could use.
+
+and if you would like to add some new commands or fix some, I would appreciate it a lot.
+
+following the conventions, you may need to extract some structs which show the meaningful things in the command and use its pointer as an argument to call the commands related function.e.g. ``Target`` and ``CreateTarget``
+
 ## License
 MIT 
