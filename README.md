@@ -9,6 +9,14 @@ to install and use the lib,use
 go get -u github.com/qzyse2017/openvas-golang-lib
 ```
 
+to get the latest code,you may find the commit ID on master branch and copy it to command line, use
+
+```
+go get -u github.com/qzyse2017/openvas-golang-lib@[latest-commit-id-here]
+```
+
+
+
 ## supported API
 currently it only supports task and target related API. And I will update it occasionally according to my needs.
 
