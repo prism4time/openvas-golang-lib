@@ -46,7 +46,8 @@ const (
 	Version7         = 7
 )
 
-// New .
+// New new an openvas instance
+// addr is the openvas address which you want to connect with
 func New(addr, username, password string) (OMP, error) {
 	c, err := newConnector(addr)
 	if err != nil {
