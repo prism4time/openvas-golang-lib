@@ -96,7 +96,7 @@ type responseDeleteTarget struct {
 	responseBase
 }
 
-// CreateTarget .
+// CreateTarget create a target and return its ID
 func (c *Connector) CreateTarget(t *Target) (string, error) {
 	req := CreateTarget{
 		Name:  t.Name,

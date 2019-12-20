@@ -2,6 +2,7 @@ package omp
 
 import (
 	"encoding/xml"
+	"errors"
 
 	"github.com/jinzhu/copier"
 )
@@ -99,4 +100,22 @@ func (c *Connector) GetScanners() ([]Scanner, error) {
 		res = append(res, resp.Scanner[i])
 	}
 	return res, nil
+}
+
+// GetDefaultScanner return the ID of default openvas scanner
+func (c *Connector) GetDefaultScanner() (string, error) {
+	return c.GetScannerByName("OpenVAS Default")
+}
+
+func (c *Connector) GetScannerByName(scannerName string) (string, error) {
+	scannerLst, err := c.GetScanners()
+	if err != nil {
+		return "", nil
+	}
+	for i := range scannerLst {
+		if scannerLst[i].Name == scannerName {
+			return scannerLst[i].ID, nil
+		}
+	}
+	return "", errors.New("no such scanner with this name", scannerName)
 }
