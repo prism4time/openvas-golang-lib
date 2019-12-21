@@ -33,7 +33,7 @@ basically I generate most of the commands related structs from xml example in [o
 
 and if you would like to add some new commands or fix some, I would appreciate it a lot.
 
-following the conventions, you may need to extract some structs which show the entities things in the command and use its pointer as an argument to call the commands related function.e.g. ``Target`` and ``CreateTarget``
+following the conventions, you may need to extract some structs which show the meaningful entities in the command and use its pointer as an argument to call the commands related function.e.g. ``Target`` and ``CreateTarget``
 
 ## License
 MIT 
