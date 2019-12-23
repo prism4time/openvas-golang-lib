@@ -16,6 +16,7 @@ type OMP interface {
 	// configs
 	CreateConfig(id string, name string) (string, error)
 	GetConfigs() ([]Config, error)
+	GetConfigByName(name string) (Config, error)
 
 	// tasks
 	CreateTask(t *Task) (string, error)
