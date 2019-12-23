@@ -254,12 +254,8 @@ type GetTasksResponse struct {
 	Text           string   `xml:",chardata"`
 	ApplyOverrides string   `xml:"apply_overrides,omitempty"`
 	Task           []Task   `xml:"task,omitempty"`
-	Filters        *struct {
-		Text string `xml:",chardata"`
-		ID   string `xml:"id,attr,omitempty"`
-		Term string `xml:"term,omitempty"`
-	} `xml:"filters,omitempty"`
-	Sort *struct {
+	Filters        *Filters `xml:"filters,omitempty"`
+	Sort           *struct {
 		Text  string `xml:",chardata"`
 		Field *struct {
 			Text  string `xml:",chardata"`

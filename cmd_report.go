@@ -43,76 +43,18 @@ type DetailedReport struct {
 			Order string `xml:"order,omitempty"`
 		} `xml:"field,omitempty"`
 	} `xml:"sort,omitempty"`
-	Filters *struct {
-		Text     string   `xml:",chardata"`
-		ID       string   `xml:"id,attr,omitempty"`
-		Term     string   `xml:"term,omitempty"`
-		Filter   []string `xml:"filter,omitempty"`
-		Keywords *struct {
-			Text    string `xml:",chardata"`
-			Keyword []*struct {
-				Text     string `xml:",chardata"`
-				Column   string `xml:"column,omitempty"`
-				Relation string `xml:"relation,omitempty"`
-				Value    string `xml:"value,omitempty"`
-			} `xml:"keyword,omitempty"`
-		} `xml:"keywords,omitempty"`
-	} `xml:"filters,omitempty"`
-	UserTags      *UserTags `xml:"user_tags,omitempty"`
-	ScanRunStatus string    `xml:"scan_run_status,omitempty"`
-	Hosts         *Hosts    `xml:"hosts,omitempty"`
-	ClosedCves    *struct {
-		Text  string `xml:",chardata"`
-		Count string `xml:"count,omitempty"`
-	} `xml:"closed_cves,omitempty"`
-	Vulns *struct {
-		Text  string `xml:",chardata"`
-		Count string `xml:"count,omitempty"`
-	} `xml:"vulns,omitempty"`
-	Os *struct {
-		Text  string `xml:",chardata"`
-		Count string `xml:"count,omitempty"`
-	} `xml:"os,omitempty"`
-	Apps *struct {
-		Text  string `xml:",chardata"`
-		Count string `xml:"count,omitempty"`
-	} `xml:"apps,omitempty"`
-	SslCerts *struct {
-		Text  string `xml:",chardata"`
-		Count string `xml:"count,omitempty"`
-	} `xml:"ssl_certs,omitempty"`
-	ResultCount *struct {
-		Text     string `xml:",chardata"`
-		Full     string `xml:"full,omitempty"`
-		Filtered string `xml:"filtered,omitempty"`
-		Debug    *struct {
-			Text     string `xml:",chardata"`
-			Full     string `xml:"full,omitempty"`
-			Filtered string `xml:"filtered,omitempty"`
-		} `xml:"debug,omitempty"`
-		Hole *struct {
-			Text     string `xml:",chardata"`
-			Full     string `xml:"full,omitempty"`
-			Filtered string `xml:"filtered,omitempty"`
-		} `xml:"hole,omitempty"`
-		Info *struct {
-			Text     string `xml:",chardata"`
-			Full     string `xml:"full,omitempty"`
-			Filtered string `xml:"filtered,omitempty"`
-		} `xml:"info,omitempty"`
-		Log *struct {
-			Text     string `xml:",chardata"`
-			Full     string `xml:"full,omitempty"`
-			Filtered string `xml:"filtered,omitempty"`
-		} `xml:"log,omitempty"`
-		Warning *struct {
-			Text     string `xml:",chardata"`
-			Full     string `xml:"full,omitempty"`
-			Filtered string `xml:"filtered,omitempty"`
-		} `xml:"warning,omitempty"`
-	} `xml:"result_count,omitempty"`
-	Task *Task `xml:"task,omitempty"`
-	Scan *struct {
+	Filters       *Filters            `xml:"filters,omitempty"`
+	UserTags      *UserTags           `xml:"user_tags,omitempty"`
+	ScanRunStatus string              `xml:"scan_run_status,omitempty"`
+	Hosts         *GeneralDescription `xml:"hosts,omitempty"`
+	ClosedCves    *GeneralDescription `xml:"closed_cves,omitempty"`
+	Vulns         *GeneralDescription `xml:"vulns,omitempty"`
+	Os            *GeneralDescription `xml:"os,omitempty"`
+	Apps          *GeneralDescription `xml:"apps,omitempty"`
+	SslCerts      *GeneralDescription `xml:"ssl_certs,omitempty"`
+	ResultCount   *ResultCount        `xml:"result_count,omitempty"`
+	Task          *Task               `xml:"task,omitempty"`
+	Scan          *struct {
 		Text string `xml:",chardata"`
 		Task string `xml:"task,omitempty"`
 	} `xml:"scan,omitempty"`

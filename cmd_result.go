@@ -65,21 +65,8 @@ type GetResultsResponse struct {
 	XMLName xml.Name `xml:"get_results_response"`
 	Text    string   `xml:",chardata"`
 	Result  []Result `xml:"result,omitempty"`
-	Filters *struct {
-		Text     string `xml:",chardata"`
-		ID       string `xml:"id,attr,omitempty"`
-		Term     string `xml:"term,omitempty"`
-		Keywords *struct {
-			Text    string `xml:",chardata"`
-			Keyword *struct {
-				Text     string `xml:",chardata"`
-				Column   string `xml:"column,omitempty"`
-				Relation string `xml:"relation,omitempty"`
-				Value    string `xml:"value,omitempty"`
-			} `xml:"keyword,omitempty"`
-		} `xml:"keywords,omitempty"`
-	} `xml:"filters,omitempty"`
-	Sort *struct {
+	Filters *Filters `xml:"filters,omitempty"`
+	Sort    *struct {
 		Text  string `xml:",chardata"`
 		Field *struct {
 			Text  string `xml:",chardata"`

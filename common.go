@@ -39,20 +39,53 @@ type Nvt struct {
 	Xref     string `xml:"xref,omitempty"`
 }
 
-// GeneralDescription for many entities
+// GeneralDescription for many entities used in reports
 type GeneralDescription struct {
 	Text  string `xml:",chardata"`
 	Count string `xml:"count,omitempty"`
 }
 
-// UserTags .
+// UserTags Description
 type UserTags GeneralDescription
 
-// Host .
+// Host Description
 type Host GeneralDescription
 
-// Hosts .
-type Hosts GeneralDescription
-
-// Errors .
+// Errors Description
 type Errors GeneralDescription
+
+// ResultCount struct used in report struct
+type ResultCount struct {
+	Text     string           `xml:",chardata"`
+	Full     string           `xml:"full,omitempty"`
+	Filtered string           `xml:"filtered,omitempty"`
+	Debug    *ResultCountItem `xml:"debug,omitempty"`
+	Hole     *ResultCountItem `xml:"hole,omitempty"`
+	Info     *ResultCountItem `xml:"info,omitempty"`
+	Log      *ResultCountItem `xml:"log,omitempty"`
+	Warning  *ResultCountItem `xml:"warning,omitempty"`
+}
+
+// ResultCountItem used in ResultCount struct
+type ResultCountItem struct {
+	Text     string `xml:",chardata"`
+	Full     string `xml:"full,omitempty"`
+	Filtered string `xml:"filtered,omitempty"`
+}
+
+// Filters for many struct
+type Filters struct {
+	Text     string   `xml:",chardata"`
+	ID       string   `xml:"id,attr,omitempty"`
+	Term     string   `xml:"term,omitempty"`
+	Filter   []string `xml:"filter,omitempty"`
+	Keywords *struct {
+		Text    string `xml:",chardata"`
+		Keyword []*struct {
+			Text     string `xml:",chardata"`
+			Column   string `xml:"column,omitempty"`
+			Relation string `xml:"relation,omitempty"`
+			Value    string `xml:"value,omitempty"`
+		} `xml:"keyword,omitempty"`
+	} `xml:"keywords,omitempty"`
+}
