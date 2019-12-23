@@ -16,22 +16,12 @@ type Result struct {
 	UserTags         *UserTags `xml:"user_tags,omitempty"`
 	Host             string    `xml:"host,omitempty"`
 	Port             string    `xml:"port,omitempty"`
-	Nvt              *struct {
-		Text     string `xml:",chardata"`
-		Oid      string `xml:"oid,attr,omitempty"`
-		Name     string `xml:"name,omitempty"`
-		CvssBase string `xml:"cvss_base,omitempty"`
-		Cve      string `xml:"cve,omitempty"`
-		Bid      string `xml:"bid,omitempty"`
-		Tags     string `xml:"tags,omitempty"`
-		Cert     string `xml:"cert,omitempty"`
-		Xref     string `xml:"xref,omitempty"`
-	} `xml:"nvt,omitempty"`
-	Threat         string `xml:"threat,omitempty"`
-	Description    string `xml:"description,omitempty"`
-	OriginalThreat string `xml:"original_threat,omitempty"`
-	Notes          string `xml:"notes,omitempty"`
-	Overrides      *struct {
+	Nvt              *Nvt      `xml:"nvt,omitempty"`
+	Threat           string    `xml:"threat,omitempty"`
+	Description      string    `xml:"description,omitempty"`
+	OriginalThreat   string    `xml:"original_threat,omitempty"`
+	Notes            string    `xml:"notes,omitempty"`
+	Overrides        *struct {
 		Text     string `xml:",chardata"`
 		Override *struct {
 			Chardata string `xml:",chardata"`
@@ -49,6 +39,14 @@ type Result struct {
 			Orphan    string `xml:"orphan,omitempty"`
 		} `xml:"override,omitempty"`
 	} `xml:"overrides,omitempty"`
+}
+
+// Results wrap result struct
+type Results struct {
+	Text   string   `xml:",chardata"`
+	Start  string   `xml:"start,attr,omitempty"`
+	Max    string   `xml:"max,attr,omitempty"`
+	Result []Result `xml:"result,omitempty"`
 }
 
 // GetResults .

@@ -6,12 +6,6 @@ import (
 	"github.com/jinzhu/copier"
 )
 
-// UserTags .
-type UserTags struct {
-	Text  string `xml:",chardata"`
-	Count string `xml:"count,omitempty"`
-}
-
 // Credential .
 type Credential struct {
 	Text             string    `xml:",chardata"`

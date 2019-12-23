@@ -38,6 +38,8 @@ type OMP interface {
 
 	// result
 	GetResults(r *Result, taskID string, filter ...string) ([]Result, error)
+	// reports
+	GetReports(id string) (Report, error)
 }
 
 // Version 版本类型
