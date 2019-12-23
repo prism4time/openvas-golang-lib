@@ -17,8 +17,6 @@ go get -u github.com/qzyse2017/openvas-golang-lib@[latest-commit-id-here]
 go mod tidy
 ```
 
-
-
 ## supported API
 currently it only supports task and target related API. And I will update it occasionally according to my needs.
 
@@ -29,7 +27,7 @@ currently it only supports task and target related API. And I will update it occ
 PRs welcome!!!!!!❤️❤️❤️❤️❤️❤️
 
 ## How to contribute
-basically I generate most of the commands related structs from xml example in [openvas's omp docs](https://docs.greenbone.net/API/OMP/omp.html). The tool is [zek](https://github.com/miku/zek), and it has a handy [online version](https://www.onlinetool.io/xmltogo/) you could use.
+basically I generate most of the commands related structs from xml example in [openvas's omp docs](https://docs.greenbone.net/API/OMP/omp.html). The tool is [zek](https://github.com/miku/zek), and it has a handy [online version](https://www.onlinetool.io/xmltogo/) you could use. The generated results may need some fixes, such as "omitempty" in json attribute.
 
 and if you would like to add some new commands or fix some, I would appreciate it a lot.
 
