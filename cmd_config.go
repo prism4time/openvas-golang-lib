@@ -1,6 +1,9 @@
 package omp
 
-import "encoding/xml"
+import (
+	"encoding/xml"
+	"errors"
+)
 
 // Config .
 type Config struct {
@@ -93,4 +96,20 @@ func (conn *Connector) GetConfigs() ([]Config, error) {
 		res = append(res, config)
 	}
 	return res, nil
+}
+
+// GetConfigByName get the config struct
+// corresponding to the name you passed in
+func (conn *Connector) GetConfigByName(name string) (Config, error) {
+	configs, err := conn.GetConfigs()
+	if err != nil {
+		return Config{}, err
+	}
+
+	for i := range configs {
+		if configs[i].Name == name {
+			return configs[i], nil
+		}
+	}
+	return Config{}, errors.New("no config with such name")
 }
