@@ -73,6 +73,7 @@ type DetailedReport struct {
 // GetReports get report by its ID
 func (conn *Connector) GetReports(id string) (Report, error) {
 	req := GetReports{}
+	req.ReportID = id
 	res := Report{}
 
 	resp := &GetReportsResponse{}
