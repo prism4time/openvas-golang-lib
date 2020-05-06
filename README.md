@@ -21,7 +21,10 @@ go mod tidy
 currently it only supports task and target related API. And I will update it occasionally according to my needs.
 
 ## examples
-[a simple example](https://github.com/qzyse2017/openvas-golang-lib-example)
+[a simple example](https://github.com/qzyse2017/openvas-golang-lib-example)(still empty now, please refer to the uint tests in the current repo
+
+## issues
+I may not respond immediately sometimes, if you need a quick response, you may email me at ``2902037215@qq.com`` or ``zyck2018@gmail.com``
 
 ## Contributions
 PRs welcome!!!!!!❤️❤️❤️❤️❤️❤️
