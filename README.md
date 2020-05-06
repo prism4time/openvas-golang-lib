@@ -24,7 +24,7 @@ currently it only supports task and target related API. And I will update it occ
 [a simple example](https://github.com/qzyse2017/openvas-golang-lib-example)(still empty now, please refer to the uint tests in the current repo
 
 ## issues
-I may not respond immediately sometimes, if you need a quick response, you may email me at ``2902037215@qq.com`` or ``zyck2018@gmail.com``
+I may not respond immediately sometimes, you may mention me with ``@qzyse2017`` in your comment and I will recieve a notification email from github
 
 ## Contributions
 PRs welcome!!!!!!❤️❤️❤️❤️❤️❤️
